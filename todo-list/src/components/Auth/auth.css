@@ -1,0 +1,137 @@
+/* Center the content */
+.auth-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Gradient background animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Styling the signup container */
+.loginSignup-fields {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: popUp 1s ease;
+}
+
+/* Card pop-up animation */
+@keyframes popUp {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Input fields styling with animation */
+.loginSignup-fields input {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Input focus effect with border color animation */
+.loginSignup-fields input:focus {
+    border-color: #1dd1a1;
+    box-shadow: 0 0 8px rgba(29, 209, 161, 0.6);
+    outline: none;
+    animation: focusInput 0.5s ease;
+}
+
+/* Input focus animation */
+@keyframes focusInput {
+    0% { border-color: #ddd; box-shadow: none; }
+    100% { border-color: #1dd1a1; box-shadow: 0 0 8px rgba(29, 209, 161, 0.6); }
+}
+
+/* Button styling with gradient and animation */
+.signbtn{
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-position 0.4s ease, transform 0.2s ease;
+    animation: buttonGradient 3s ease infinite;
+}
+
+/* Button gradient hover effect */
+.signbtn:hover {
+    background-position: 100% 0%;
+    transform: scale(1.05);
+}
+
+/* Button gradient animation */
+@keyframes buttonGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 26px;
+    animation: fadeIn 2s ease;
+}
+
+/* Heading fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Link to login */
+.loginSignup-login {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.loginSignup-login a {
+    color: #1dd1a1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.loginSignup-login a:hover {
+    color: #ff6b6b;
+    text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .loginSignup-fields {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
