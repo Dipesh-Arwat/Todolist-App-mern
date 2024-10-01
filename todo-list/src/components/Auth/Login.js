@@ -29,7 +29,7 @@ const Login = () => {
         if (!validate()) return; 
 
         try {
-            const response = await axios.post('https://todolist-app-mern-backend.onrender.com/api/auth/login', { email, password });
+            const response = await axios.post('https://todolist-app-mern-backend.onrender.com/login', { email, password });
             localStorage.setItem('username', response.data.username); 
             navigate('/todo'); 
         } catch (error) {

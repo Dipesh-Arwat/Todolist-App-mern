@@ -31,7 +31,7 @@ const Signup = () => {
         if (!validate()) return;
 
         try {
-            await axios.post('https://todolist-app-mern-backend.onrender.com/api/auth/register', { name, email, password });
+            await axios.post('https://todolist-app-mern-backend.onrender.com/register', { name, email, password });
             navigate('/login');
         } catch (error) {
             console.error('Error signing up', error);
