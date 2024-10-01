@@ -4,7 +4,7 @@ import axios from 'axios';
 import icon from '../assets/icon.png';
 import { useNavigate } from 'react-router-dom';
 
-const API_URL = 'http://localhost:5000/api/todos'; // Your API endpoint
+const API_URL = 'https://todolist-app-mern-backend.onrender.com/api/todos'; // Your API endpoint
 
 function TodoApp() {
   const [tasks, setTasks] = useState([]);
